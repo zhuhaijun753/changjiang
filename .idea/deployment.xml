@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData">
+    <serverData>
+      <paths name="Remote Host (5384fef7-0710-4cf7-9265-eacce874d178)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/media/work1/jason_tbox/simcom003/sim_open_sdk/tbox_changjiang" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>

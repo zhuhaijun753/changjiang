@@ -1,0 +1,29 @@
+#! /bin/sh
+
+set -e
+
+case "$1" in
+start)
+    echo -n "Starting tbox: "
+    start-stop-daemon -S -b -a /usr/bin/monitor.sh start 0
+	sleep 0.1
+	start-stop-daemon -S -b -a /usr/bin/monitorTbox
+    echo "done"
+    ;;
+  stop)
+    echo -n "Stopping tbox: "
+    start-stop-daemon -K -n tbox
+	start-stop-daemon -K -n monitorTbox
+    echo "done"
+    ;;
+  restart)
+    $0 stop
+    $0 start
+    ;;
+  *)
+    echo "Usage tbox{ start | stop | restart }" >&2
+    exit 1
+    ;;
+esac
+
+exit 0
